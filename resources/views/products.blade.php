@@ -1,16 +1,14 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.main')
 
-    <title>Laravel</title>
+@section('title', 'Produtos')
 
-    <link rel="stylesheet" href="/css/styles.css">
-    <script src="/js/scripts.js"></script>
-</head>
-<body>
+@section('content')
 <h1> Tela de produtos </h1>
 
-</body>
-</html>
+@if($busca != '')
+<p>O usuario esta buscando por : {{ $busca }} </p>
+@endif
+
+
+@endsection
+
