@@ -3,9 +3,5 @@
 @section('title', 'Produto')
 
 @section('content')
-
-    @if($id != null)
-        <p>Exibindo produto id: {{ $id }}</p>
-    @endif
-
+        <h1> Exibindo Produtos</h1>
 @endsection
