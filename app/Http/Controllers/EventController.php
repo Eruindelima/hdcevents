@@ -6,22 +6,7 @@ class EventController extends Controller
 {
     public function indeX()
     {
-        $nome = "Matheus";
-        $idade = 29;
-
-        $arr = [1, 2, 3, 4, 5, 6];
-
-        $nomes = ["ERUIN", "LEONARDO", "VITÃO", "GABRIEL"];
-
-        return view(
-            'welcome',
-            ['nome' => $nome,
-                'idade' => $idade,
-                'profissao' => "programador",
-                'arr' => $arr,
-                'nomes' => $nomes,
-            ]
-        );
+        return view('welcome');
     }
 
     public function create()
