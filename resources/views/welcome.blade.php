@@ -3,7 +3,28 @@
 @section('title', 'HDC Events')
 
 @section('content')
-<h1>Algum titulo</h1>
-<img src="/img/banner.jpg" alt="Banner">
-{{-- Este ´é o comentario do blade--}}
+
+<div id="search-container" class="col-md-12">
+    <h1>Busque um evento</h1>
+    <form action="">
+        <input tyoe="text" id="search" nam="search" class="form-control" placeholder="Procurar...">
+    </form>
+</div>
+<div id="events-container" class="col-md-12">
+    <h2>Próximos Eventos</h2>
+    <p class="subtitle">Veja os eventos dos próximos dias</p>
+    <div id="cards-container" class="row">
+        @foreach($events as $event)
+        <div class="card col-md-3">
+            <img src="/img/event_placeholder.jpg" alt="{{ $event->title }}">
+            <div class="card-body">
+                <p class="card-date">19/01/2021</p>
+                <h5 class="card-title">{{ $event->title }}</h5>
+                <p class="card-participants">X participantes</p>
+                <a href="#" class="btn btn-primary">Saber mais</a>
+            </div>
+        </div>
+        @endforeach
+    </div>
+</div>
 @endsection

@@ -2,25 +2,19 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Event;
+
 class EventController extends Controller
 {
     public function indeX()
     {
-        return view('welcome');
+        $events = Event::all();
+
+        return view('welcome', ['events' => $events]);
     }
 
     public function create()
     {
         return view('events.create');
-    }
-
-    public function contact()
-    {
-        return view('contact');
-    }
-
-    public function product()
-    {
-        return view('product');
     }
 }

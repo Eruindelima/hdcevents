@@ -17,4 +17,3 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [EventController::class, 'index']);
 Route::get('/events/create', [EventController::class, 'create']);
 Route::get('/contatos', [EventController::class, 'contact']);
-Route::get('/produtos', [EventController::class, 'product']);
