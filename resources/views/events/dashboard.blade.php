@@ -24,7 +24,13 @@
                     <td scropt="row">{{ $loop->index +1 }}</td>
                     <td><a href="/events/{{ $event->id }}">{{ $event->title }}</a></td>
                     <td>0</td>
-                    <td><a href="#">Editar</a> <a href="?#">Deletar</a></td>
+                    <td>
+                        <a href="events/edit/{{ $event->id }}" class="btn btn-info edit-btn"><ion-ico name="create-outline"></ion-ico> Editar</a>
+                        <form action="/events/ {{ $event->id }}" method="POST">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="btn btn-danger delete-btn"><ion-ico name="trash-outline"></ion-ico>Deletar</button>
+                        </form>
                 </tr>
             @endforeach
         </tbody>
